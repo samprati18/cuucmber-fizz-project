@@ -31,7 +31,7 @@ pipeline{
         }
 
 
-        stage ('Cucumber Reports') {
+    stage ('Cucumber Reports') {
 
             steps {
                 cucumber buildStatus: "UNSTABLE",
@@ -41,7 +41,7 @@ pipeline{
             }
 
         }
-		stage('Generate HTML report') {
+	stage('Generate HTML report') {
         cucumber buildStatus: 'UNSTABLE',
                 fileIncludePattern: '**/*.json',
                 trendsLimit: 10,
