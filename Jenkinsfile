@@ -63,8 +63,6 @@ pipeline{
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100
     }
-	
-}
 }
 
     
