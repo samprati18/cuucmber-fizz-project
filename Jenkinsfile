@@ -63,9 +63,7 @@ pipeline{
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100
     }
-}
-
-    configure { project ->
+	configure { project ->
   project / 'publishers' << 'net.masterthought.jenkins.CucumberReportPublisher' {
     fileIncludePattern '**/*.json'
     fileExcludePattern ''
@@ -81,5 +79,8 @@ pipeline{
     sortingMethod 'ALPHABETICAL'
   }
 }
+}
+
+    
 
 }
