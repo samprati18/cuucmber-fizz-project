@@ -8,7 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources",
         glue = "com.techprimers.testing",
-        format = {"json:target/cucumber.json"}
+        plugin = {
+                "html:target/basicReport", "json:target/basicReport/cucumber.json",
+                "pretty:target/basicReport/cucumber-pretty.txt",
+                "usage:target/basicReport/cucumber-usage.json", "junit:target/basicReport/cucumber-results.xml",
+                "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}
 )
 public class CucumberTest {
 }
